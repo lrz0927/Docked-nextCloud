@@ -11,7 +11,7 @@ version: '2'
 
 services:
   proxy:
-    image: jwilder/nginx-proxy
+    image: Budry/jwilder-nginx-proxy-arm
     container_name: proxy
     ports:
       - 80:80
@@ -27,7 +27,7 @@ services:
     restart: always
 
   letsencrypt-companion:
-    image: jrcs/letsencrypt-nginx-proxy-companion
+    image: Budry/jrcs-docker-letsencrypt-nginx-proxy-companion-arm
     container_name: letsencrypt-companion
     volumes_from:
       - proxy
